@@ -58,15 +58,14 @@ From steps , , , and , we can say ; then using the values from step , , , and , 
 //Complete the following function.
 
 int find_nth_term(int n, int a, int b, int c) {
-    if (n==1) return 1;
-    if (n==2) return 2;
-    if (n==3) return 3;
-    
-    int new_a = find_nth_term(n-3, a,b,c);
-    int new_b = find_nth_term(n-2, a,b,c);
-    int new_c = find_nth_term(n-1, a,b,c);
-    
-    return new_a+new_b+new_c;
+    if(n==1){
+        return a;
+    }
+    if(n==2)
+        return b;
+    if(n==3)
+        return c;
+    return find_nth_term(n-1, a, b, c)+find_nth_term(n-2, a, b, c)+find_nth_term(n-3, a, b, c);
 }
 
 int main() {
