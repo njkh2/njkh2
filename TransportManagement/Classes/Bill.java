@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Bill{
         /*create table bill(
-	bill_number int auto_increment primary key,
+	bill_number int primary key,
     party_name varchar(50),
     import_export String ,
     pickup_from varchar(20),
